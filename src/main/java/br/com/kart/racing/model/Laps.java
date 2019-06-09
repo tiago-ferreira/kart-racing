@@ -10,6 +10,17 @@ public class Laps {
 	private LocalTime lapTime;
 	private Double averageSpeed;
 
+	
+	
+	public Laps(Pilot pilot, LocalTime hour, Integer lapNumber, LocalTime lapTime, Double averageSpeed) {
+		super();
+		this.pilot = pilot;
+		this.hour = hour;
+		this.lapNumber = lapNumber;
+		this.lapTime = lapTime;
+		this.averageSpeed = averageSpeed;
+	}
+
 	public Pilot getPilot() {
 		return pilot;
 	}
@@ -50,4 +61,5 @@ public class Laps {
 		this.averageSpeed = averageSpeed;
 	}
 
+	
 }
