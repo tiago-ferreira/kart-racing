@@ -12,9 +12,14 @@ public class Execute {
 		FileReader fileReader = new FileReader();
 		try {
 			Stream<String> lines = fileReader.readFile("data.txt", true, IgnoreTitle.Yes);
-			lines.forEach(System.out::println);
+//			lines.forEach(System.out::println);
+			String val = lines.findFirst().get();
+			System.out.println(val);
+			String[] values = val.split("\\s+");
+			for(String v : values) {
+				System.out.println(v);
+			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
